@@ -3,6 +3,7 @@ import cors from 'cors';
 import axios from 'axios';
 
 import requestLogger from './middleware/loggingMiddleware.js';
+import errorHandler from './middleware/errorMiddleware.js';
 import recipesRouter from './routes/recipes.js';
 
 // Initialize Express app and set up middleware
@@ -10,6 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(requestLogger);
+app.use(errorHandler);
 
 app.use('/api/recipes/', recipesRouter);
 

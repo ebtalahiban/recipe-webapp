@@ -13,8 +13,7 @@ export const searchMeals = async (req, res) => {
         }
         res.status(200).json(meals);
     } catch (error) {
-        console.error('Error searching for meals: ', error);
-        res.status(500).json({ error: 'Unable to search meals' });
+        errorHandler(error, req, res);
     }
 }
 
@@ -30,8 +29,7 @@ export const listCategories = async (req, res) => {
         }
         res.status(200).json(categories);
     } catch (error) {
-        console.error('Error listing categories:', error);
-        res.status(500).json({ error: 'Unable to list categories' });
+        errorHandler(error, req, res);
     }
 }
 
@@ -48,8 +46,7 @@ export const filterByCategory = async (req, res) => {
         }
         res.status(200).json(meals);
     } catch (error) {
-        console.error('Error listing categories:', error);
-        res.status(500).json({ error: 'Unable to list categories' });
+        errorHandler(error, req, res);
     }
 }
 
@@ -66,7 +63,6 @@ export const fetchRecipeByID = async (req, res) => {
         }
         res.status(200).json(recipe);
     } catch (error) {
-        console.error('Error searching for meals: ', error);
-        res.status(500).json({ error: 'Unable to search meals' });
+        errorHandler(error, req, res);
     }
 }
