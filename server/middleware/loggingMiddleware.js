@@ -1,7 +1,10 @@
 // This middleware logs information about incoming requests
 
 function requestLogger (req, res, next) {
-    console.log(`[${new Date().toISOString()}] ${req.method} - ${req.originalUrl}`);
+    const date = new Date().toISOString();
+    const method = req.method;
+    const url = req.originalUrl || req._parsedUrl.pathname + '?' + JSON.stringify(req.query);
+    console.log(`[${date}] ${method} - ${url}`);
     next();
 }
 
