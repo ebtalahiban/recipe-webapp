@@ -1,4 +1,5 @@
 import axios from 'axios';
+import errorHandler from '../middleware/errorMiddleware.js';
 
 // Search recipes by name
 export const searchMeals = async (req, res) => {
@@ -62,6 +63,22 @@ export const fetchRecipeByID = async (req, res) => {
             return;
         }
         res.status(200).json(recipe);
+    } catch (error) {
+        errorHandler(error, req, res);
+    }
+}
+
+// Fetch a random recipe
+export const fetchRandomRecipe = async (req, res) => {
+    try {
+        const response = await axios.get('https://www.themealdb.com/api/json/v1/1/random.php');
+        const randomRecipe = response.data.meals;
+        console.log(randomRecipe);
+        if(!randomRecipe){
+            res.status(404).send({message: "Error looking for a recipe"});
+            return;
+        }
+        res.status(200).json(randomRecipe);
     } catch (error) {
         errorHandler(error, req, res);
     }
