@@ -1,5 +1,5 @@
 import React from 'react';
-import './searchbar.css'; // Import your custom CSS for styling
+import './searchbar.css'; 
 
 function SearchBar() {
   return (
