@@ -84,11 +84,13 @@ export const fetchRandomRecipe = async (req, res) => {
     }
 }
 
-// List all main ingredients
+// List main ingredients
 export const listMainIngredients = async (req, res) => {
     try {
         const response = await axios.get('https://www.themealdb.com/api/json/v1/1/list.php?i=list');
-        const ingredients = response.data.meals;
+        let ingredients = response.data.meals;
+        // Only get the first 4 ingredients
+        ingredients = ingredients.slice(0,4);
         console.log(ingredients);
         if(!ingredients){
             res.status(404).send({message: "No recipe ingredients found"});
