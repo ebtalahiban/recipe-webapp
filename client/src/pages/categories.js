@@ -1,12 +1,12 @@
 import React from 'react'
-import Searchbar from '../components/searchbar';
-import Categories from '../components/categoriesGrid';
+import Searchbar from '../components/Searchbar';
+import CategoryGrid from '../components/CategoryGrid';
 
 const categories = () => {
   return (
     <div>
       <Searchbar />
-      <Categories />
+      <CategoryGrid />
     </div>
   )
 }

@@ -12,6 +12,7 @@
   border: none;
   border-radius: 5px;
   margin-right: 10px;
+  font-family: 'Courier New', monospace;
 }
 
 .search-button {
@@ -22,6 +23,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Courier New', monospace;
 }
 
 .search-button:hover {
