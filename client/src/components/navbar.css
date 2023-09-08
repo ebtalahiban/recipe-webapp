@@ -33,7 +33,12 @@
 }
 
 .navbar-link:hover {
-  color: #f06060; /* Change to your preferred highlight color */
+  color: #f06060; 
+}
+
+.custom-link {
+  text-decoration: none;
+  color: inherit; 
 }
 
 /* CSS for smaller screens (e.g., mobile) */
@@ -43,12 +48,12 @@
     color: white;
     padding: 10px 0;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center text for smaller screens */
+    text-align: center; 
   }
 
   .navbar-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically for smaller screens */
+    flex-direction: column; 
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -58,7 +63,7 @@
   .navbar-logo {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px; /* Add some spacing between logo and links */
+    margin-bottom: 10px; 
   }
 
   .navbar-links {
@@ -70,10 +75,10 @@
     cursor: pointer;
     font-size: 18px;
     transition: color 0.3s;
-    margin: 5px 0; /* Add spacing between links */
+    margin: 5px 0;
   }
 
   .navbar-link:hover {
-    color: #f06060; /* Change to your preferred highlight color */
+    color: #f06060; 
   }
 }

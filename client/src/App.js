@@ -1,6 +1,7 @@
 
 import Navbar from './components/navbar';
-import Searchbar from './components/searchbar';
+import Home from './pages/home';
+import Categories from './pages/categories';
 import './App.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -10,7 +11,8 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Searchbar />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
     </BrowserRouter>
   );

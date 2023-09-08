@@ -1,6 +1,6 @@
 /* SearchBar.css */
 .search-bar {
-  background-color: #f06060; /* Match the highlight color in the navbar */
+  background-color: #f06060; 
   padding: 20px;
   text-align: center;
 }
@@ -16,7 +16,7 @@
 
 .search-button {
   background-color: white;
-  color: #f06060; /* Match the highlight color in the navbar */
+  color: #f06060; 
   padding: 10px 20px;
   font-size: 18px;
   border: none;
@@ -25,38 +25,7 @@
 }
 
 .search-button:hover {
-  background-color: #35465d; /* Change to your preferred button hover color */
+  background-color: #35465d; 
   color: white;
 }
 
-/* @media (max-width: 767px) {
-  .search-bar {
-    background-color: #f06060;
-    padding: 10px; 
-    text-align: center;
-  }
-  
-  .search-input {
-    width: 100%; 
-    padding: 10px;
-    font-size: 16px; 
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 10px; 
-  }
-  
-  .search-button {
-    background-color: white;
-    color: #f06060;
-    padding: 10px 20px;
-    font-size: 16px; 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .search-button:hover {
-    background-color: #35465d;
-    color: white;
-  }
-} */
