@@ -101,3 +101,30 @@ export const listMainIngredients = async (req, res) => {
         errorHandler(error, req, res);
     }
 }
+
+// List countries and their recipes with images
+export const listCountryRecipes = async (req, res) => {
+    try {
+        const response = await axios.get('https://www.themealdb.com/api/json/v1/1/list.php?a=list');
+        const countries = response.data.meals;
+        
+        if (!countries) {
+            res.status(404).send({ message: "No country recipes found" });
+            return;
+        }
+
+        // Fetch images for each country
+        const countriesWithImages = await Promise.all(
+            countries.map(async (country) => {
+                const imageResponse = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country.strArea}`);
+                const image = imageResponse.data.meals[0].strMealThumb; 
+                // Combine the country data with the image
+                return { ...country, image };
+            })
+        );
+        console.log(countriesWithImages);
+        res.status(200).json(countriesWithImages);
+    } catch (error) {
+        errorHandler(error, req, res);
+    }
+}

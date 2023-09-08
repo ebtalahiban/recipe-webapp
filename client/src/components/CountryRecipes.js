@@ -1,4 +1,5 @@
 import React from 'react';
+import { getCountryRecipes } from '../services/recipeService';
 import './CountryRecipes.css';
 
 const CountryRecipes = () => {
