@@ -10,3 +10,4 @@ export const getRecipeCategories = async (req, res) => {
         throw error;
     }
 }
+
