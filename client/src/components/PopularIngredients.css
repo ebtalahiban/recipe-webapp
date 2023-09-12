@@ -1,14 +1,18 @@
 /* popularIngredients.css */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Manrope');
+
 .popular-ingredients {
     text-align: center;
-    margin-top: 20px;
+    padding-top: 10px;
   }
   
   .popular-ingredients h2 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
     font-weight: bold;
-    font-family: 'Courier New', monospace;
+    font-family:Manrope;
+    color: #101356;
   }
   
   .ingredient-grid {
@@ -20,17 +24,19 @@
   }
   
   .ingredient-tile {
-    background-color: #f06060;
-    color: white;
+    /* background-color: #e8e8e8; */
+    color: #101356;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    border: 2px solid black;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Add transition for smooth hover effect */
   }
   
   .ingredient-tile:hover {
-    background-color: #35465d; /* Change background color on hover */
+    background-color: #101356; /* Change background color on hover */
+    color: white;
     transform: translateY(-5px); /* Add a slight lift effect on hover */
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
   }
@@ -38,7 +44,8 @@
   .ingredient-tile h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    font-family: 'Courier New', monospace;
+    font-weight: normal;
+    font-family: Roboto;
   }
   
   .ingredient-tile p {

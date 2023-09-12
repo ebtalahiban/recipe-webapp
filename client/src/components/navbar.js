@@ -10,8 +10,8 @@ function Navbar() {
         <ul className="navbar-links">
           <li className="navbar-link"><Link to="/" className='custom-link'>Home</Link></li>
           <li className="navbar-link"><Link to="/categories" className='custom-link'>Categories</Link></li>
-          <li className="navbar-link">MyRecipes</li>
-          <li className="navbar-link">Login</li>
+          {/* <li className="navbar-link">MyRecipes</li>
+          <li className="navbar-link">Login</li> */}
         </ul>
       </div>
     </nav>

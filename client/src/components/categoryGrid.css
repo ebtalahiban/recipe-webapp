@@ -25,11 +25,12 @@
   }
   
   .category-tile {
-    background-color: #f06060;
-    color: white;
+    background-color: white;
+    color: #101356;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
+    border: 2px solid black;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     font-family: 'Courier New', monospace; 
@@ -49,7 +50,8 @@
   }
   
   .category-tile:hover {
-    background-color: #35465d;
+    background-color: #101356;
+    color: white;
     transform: translateY(-5px); 
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
   }
